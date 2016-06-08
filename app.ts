@@ -4,7 +4,7 @@ let calendarInstance = [];
 class Calendar {
   static load(callback) {
     jQuery.get("./calendar.json", function(calendar) {
-      callback(JSON.parse(calendar));
+      callback(calendar);
     });
   }
 

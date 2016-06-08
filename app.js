@@ -5,7 +5,7 @@ var Calendar = (function () {
     }
     Calendar.load = function (callback) {
         jQuery.get("./calendar.json", function (calendar) {
-            callback(JSON.parse(calendar));
+            callback(calendar);
         });
     };
     Calendar.extractDate = function (date) {
