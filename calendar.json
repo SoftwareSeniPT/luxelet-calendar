@@ -1,0 +1,694 @@
+[{
+    "name": "<a href='http://app.luxelet.com:80/villas/555' class='tooltips' target='_blank' title='Ambra' data-name='Ambra'>Ambra<br/><span> <strong>Pantai Lima Estate: Ambra</strong> (5BR)<br/><img src='http://images.villalet.com/luxelet/data/11530/small_1._first_picture.jpg?1452566965' /><br /> Location : Pantai Lima Estate Canggu Bali </span></a>",
+    "values": [{
+        "customClass": "ganttRed",
+        "dataObj": "/bookings/1627/edit",
+        "desc": "Villa Website Direct Booking  <br/><br/>Status: Confirmed <br/>Date 27 May 2016 <br/>Stays 5 nights",
+        "from": "/Date(1464307200000)/",
+        "label": "Villa Website Direct Booking ",
+        "to": "/Date(1464739200000)/"
+    }, {
+        "customClass": "ganttGrey",
+        "dataObj": "/bookings/1074/edit",
+        "desc": "Villa Website Direct Booking  <br/><br/>Status: Completed <br/>Date 25 Mar 2016 <br/>Stays 9 nights",
+        "from": "/Date(1458864000000)/",
+        "label": "Villa Website Direct Booking ",
+        "to": "/Date(1459641600000)/"
+    }, {
+        "customClass": "ganttOrange",
+        "dataObj": "/bookings/1215/edit",
+        "desc": "Beyond Villas Bali  <br/><br/>Status: Awaiting balance <br/>Date 08 Nov 2016 <br/>Stays 5 nights",
+        "from": "/Date(1478563200000)/",
+        "label": "Beyond Villas Bali ",
+        "to": "/Date(1478995200000)/"
+    }, {
+        "customClass": "ganttRed",
+        "dataObj": "/bookings/1167/edit",
+        "desc": "Villa Website Direct Booking  <br/><br/>Status: Confirmed <br/>Date 19 Jun 2016 <br/>Stays 7 nights",
+        "from": "/Date(1466294400000)/",
+        "label": "Villa Website Direct Booking ",
+        "to": "/Date(1466899200000)/"
+    }, {
+        "customClass": "ganttRed",
+        "dataObj": "/bookings/1325/edit",
+        "desc": "Villa Website Direct Booking  <br/><br/>Status: Confirmed <br/>Date 12 Aug 2016 <br/>Stays 7 nights",
+        "from": "/Date(1470960000000)/",
+        "label": "Villa Website Direct Booking ",
+        "to": "/Date(1471564800000)/"
+    }, {
+        "customClass": "ganttGreen",
+        "dataObj": "/bookings/1589/edit",
+        "desc": "Elite Havens  <br/><br/>Status: On hold <br/>Date 05 Jun 2016 <br/>Stays 7 nights",
+        "from": "/Date(1465084800000)/",
+        "label": "Elite Havens ",
+        "to": "/Date(1465689600000)/"
+    }, {
+        "customClass": "ganttGreen",
+        "dataObj": "/bookings/1590/edit",
+        "desc": "Elite Havens  <br/><br/>Status: On hold <br/>Date 15 Jul 2016 <br/>Stays 7 nights",
+        "from": "/Date(1468540800000)/",
+        "label": "Elite Havens ",
+        "to": "/Date(1469145600000)/"
+    }]
+}, {
+    "name": "<a href='http://app.luxelet.com:80/villas/599' class='tooltips' target='_blank' title='BO 1005' data-name='BO 1005'>BO 1005<br/><span> <strong> BO 1005</strong> (3BR)<br/><img src='http://images.villalet.com/luxelet/data/11616/small_1._first_picture.jpg?1452582443' /><br /> Location :  Canggu Bali </span></a>",
+    "values": [{
+        "customClass": "ganttGrey",
+        "dataObj": "/bookings/980/edit",
+        "desc": "Villa Website Direct Booking  <br/><br/>Status: Completed <br/>Date 31 Jan 2016 <br/>Stays 1 night",
+        "from": "/Date(1454198400000)/",
+        "label": "Villa Website Direct Booking ",
+        "to": "/Date(1454284800000)/"
+    }, {
+        "customClass": "ganttGrey",
+        "dataObj": "/bookings/1019/edit",
+        "desc": "Villa/Bali  <br/><br/>Status: Completed <br/>Date 12 Feb 2016 <br/>Stays 3 nights",
+        "from": "/Date(1455235200000)/",
+        "label": "Villa/Bali ",
+        "to": "/Date(1455494400000)/"
+    }, {
+        "customClass": "ganttGrey",
+        "dataObj": "/bookings/1087/edit",
+        "desc": "Ministry of Villas  <br/><br/>Status: Completed <br/>Date 30 Mar 2016 <br/>Stays 7 nights",
+        "from": "/Date(1459296000000)/",
+        "label": "Ministry of Villas ",
+        "to": "/Date(1459900800000)/"
+    }, {
+        "customClass": "ganttGrey",
+        "dataObj": "/bookings/989/edit",
+        "desc": "Villa Website Direct Booking  <br/><br/>Status: Completed <br/>Date 04 Feb 2016 <br/>Stays 7 nights",
+        "from": "/Date(1454544000000)/",
+        "label": "Villa Website Direct Booking ",
+        "to": "/Date(1455148800000)/"
+    }]
+}, {
+    "name": "<a href='http://app.luxelet.com:80/villas/551' class='tooltips' target='_blank' title='BO 1006' data-name='BO 1006'>BO 1006<br/><span> <strong> BO 1006</strong> (5BR)<br/><img src='http://images.villalet.com/luxelet/data/10581/small_52335857.jpg?1449542660' /><br /> Location :  Canggu Bali </span></a>",
+    "values": [{
+        "customClass": "ganttOrange",
+        "dataObj": "/bookings/1160/edit",
+        "desc": "Villa Website Direct Booking  <br/><br/>Status: Awaiting balance <br/>Date 12 Jun 2016 <br/>Stays 4 nights",
+        "from": "/Date(1465689600000)/",
+        "label": "Villa Website Direct Booking ",
+        "to": "/Date(1466035200000)/"
+    }]
+}, {
+    "name": "<a href='http://app.luxelet.com:80/villas/817' class='tooltips' target='_blank' title='BO1007' data-name='BO1007'>BO1007<br/><span> <strong> BO1007</strong> (4BR)<br/><img src='http://images.villalet.com/luxelet/data/14578/small_10.jpg?1462348199' /><br /> Location :  Seminyak Bali </span></a>",
+    "values": []
+}, {
+    "name": "<a href='http://app.luxelet.com:80/villas/592' class='tooltips' target='_blank' title='Campur' data-name='Campur'>Campur<br/><span> <strong> Campur</strong> (2BR)<br/><img src='http://images.villalet.com/luxelet/data/11548/small_campur-02.jpg?1452567139' /><br /> Location :  Seseh Beach Bali </span></a>",
+    "values": [{
+        "customClass": "ganttGrey",
+        "dataObj": "/bookings/1056/edit",
+        "desc": "BaliOn  <br/><br/>Status: Completed <br/>Date 08 Mar 2016 <br/>Stays 5 nights",
+        "from": "/Date(1457395200000)/",
+        "label": "BaliOn ",
+        "to": "/Date(1457827200000)/"
+    }, {
+        "customClass": "ganttRed",
+        "dataObj": "/bookings/1388/edit",
+        "desc": "Villa Website Direct Booking  <br/><br/>Status: Confirmed <br/>Date 15 Apr 2016 <br/>Stays 5 nights",
+        "from": "/Date(1460678400000)/",
+        "label": "Villa Website Direct Booking ",
+        "to": "/Date(1461110400000)/"
+    }, {
+        "customClass": "ganttGrey",
+        "dataObj": "/bookings/962/edit",
+        "desc": "Smaragd Reizen  <br/><br/>Status: Completed <br/>Date 20 Jan 2016 <br/>Stays 7 nights",
+        "from": "/Date(1453248000000)/",
+        "label": "Smaragd Reizen ",
+        "to": "/Date(1453852800000)/"
+    }, {
+        "customClass": "ganttOrange",
+        "dataObj": "/bookings/1575/edit",
+        "desc": "Villa/Bali  <br/><br/>Status: Awaiting deposit <br/>Date 08 Jul 2016 <br/>Stays 3 nights",
+        "from": "/Date(1467936000000)/",
+        "label": "Villa/Bali ",
+        "to": "/Date(1468195200000)/"
+    }, {
+        "customClass": "ganttGrey",
+        "dataObj": "/bookings/1022/edit",
+        "desc": "BaliOn  <br/><br/>Status: Completed <br/>Date 15 Feb 2016 <br/>Stays 5 nights",
+        "from": "/Date(1455494400000)/",
+        "label": "BaliOn ",
+        "to": "/Date(1455926400000)/"
+    }, {
+        "customClass": "ganttRed",
+        "dataObj": "/bookings/1824/edit",
+        "desc": "BaliOn Agent <br/><br/>Status: Confirmed <br/>Date 09 Jun 2016 <br/>Stays 9 nights",
+        "from": "/Date(1465430400000)/",
+        "label": "BaliOn Agent",
+        "to": "/Date(1466208000000)/"
+    }]
+}, {
+    "name": "<a href='http://app.luxelet.com:80/villas/589' class='tooltips' target='_blank' title='Cantik' data-name='Cantik'>Cantik<br/><span> <strong>Shalimar Complex: Cantik</strong> (2BR)<br/><img src='http://images.villalet.com/luxelet/data/11741/small_shalimar-cantik-02.jpg?1452587209' /><br /> Location : Shalimar Complex Seseh Beach Bali </span></a>",
+    "values": [{
+        "customClass": "ganttGrey",
+        "dataObj": "/bookings/973/edit",
+        "desc": "Booking Bali Villas  <br/><br/>Status: Completed <br/>Date 28 Jan 2016 <br/>Stays 1 night",
+        "from": "/Date(1453939200000)/",
+        "label": "Booking Bali Villas ",
+        "to": "/Date(1454025600000)/"
+    }, {
+        "customClass": "ganttGrey",
+        "dataObj": "/bookings/994/edit",
+        "desc": "Villa Website Direct Booking  <br/><br/>Status: Completed <br/>Date 05 Feb 2016 <br/>Stays 4 nights",
+        "from": "/Date(1454630400000)/",
+        "label": "Villa Website Direct Booking ",
+        "to": "/Date(1454976000000)/"
+    }, {
+        "customClass": "ganttRed",
+        "dataObj": "/bookings/1412/edit",
+        "desc": "Wheelock Company   <br/><br/>Status: Confirmed <br/>Date 27 Apr 2016 <br/>Stays 5 nights",
+        "from": "/Date(1461715200000)/",
+        "label": "Wheelock Company  ",
+        "to": "/Date(1462147200000)/"
+    }, {
+        "customClass": "ganttGrey",
+        "dataObj": "/bookings/1455/edit",
+        "desc": "BaliOn  <br/><br/>Status: Completed <br/>Date 12 Feb 2016 <br/>Stays 1 night",
+        "from": "/Date(1455235200000)/",
+        "label": "BaliOn ",
+        "to": "/Date(1455321600000)/"
+    }, {
+        "customClass": "ganttGrey",
+        "dataObj": "/bookings/1025/edit",
+        "desc": "Bali Villas HVR  <br/><br/>Status: Completed <br/>Date 17 Feb 2016 <br/>Stays 5 nights",
+        "from": "/Date(1455667200000)/",
+        "label": "Bali Villas HVR ",
+        "to": "/Date(1456099200000)/"
+    }, {
+        "customClass": "ganttRed",
+        "dataObj": "/bookings/1107/edit",
+        "desc": "Good Living Asia  <br/><br/>Status: Confirmed <br/>Date 21 Apr 2016 <br/>Stays 3 nights",
+        "from": "/Date(1461196800000)/",
+        "label": "Good Living Asia ",
+        "to": "/Date(1461456000000)/"
+    }, {
+        "customClass": "ganttRed",
+        "dataObj": "/bookings/1656/edit",
+        "desc": "Laura  Tang  <br/><br/>Status: Confirmed <br/>Date 20 May 2016 <br/>Stays 2 nights",
+        "from": "/Date(1463702400000)/",
+        "label": "Laura  Tang ",
+        "to": "/Date(1463875200000)/"
+    }, {
+        "customClass": "ganttGreen",
+        "dataObj": "/bookings/1573/edit",
+        "desc": "Villa/Bali  <br/><br/>Status: On hold <br/>Date 10 May 2016 <br/>Stays 8 nights",
+        "from": "/Date(1462838400000)/",
+        "label": "Villa/Bali ",
+        "to": "/Date(1463529600000)/"
+    }]
+}, {
+    "name": "<a href='http://app.luxelet.com:80/villas/602' class='tooltips' target='_blank' title='Eden Front side' data-name='Eden Front side'>Eden Front side<br/><span> <strong>Eden: Eden Front side</strong> (3BR)<br/><img src='http://images.villalet.com/luxelet/data/11952/small_eden-02.jpg?1453270782' /><br /> Location : Eden Seminyak Bali </span></a>",
+    "values": [{
+        "customClass": "ganttGrey",
+        "dataObj": "/bookings/947/edit",
+        "desc": "Tiket.com  <br/><br/>Status: Completed <br/>Date 15 Jan 2016 <br/>Stays 3 nights",
+        "from": "/Date(1452816000000)/",
+        "label": "Tiket.com ",
+        "to": "/Date(1453075200000)/"
+    }, {
+        "customClass": "ganttGrey",
+        "dataObj": "/bookings/1067/edit",
+        "desc": "Expedia.com  <br/><br/>Status: Completed <br/>Date 20 Mar 2016 <br/>Stays 7 nights",
+        "from": "/Date(1458432000000)/",
+        "label": "Expedia.com ",
+        "to": "/Date(1459036800000)/"
+    }, {
+        "customClass": "ganttGrey",
+        "dataObj": "/bookings/935/edit",
+        "desc": "Beyond Villas Bali  <br/><br/>Status: Completed <br/>Date 09 Jan 2016 <br/>Stays 9 nights",
+        "from": "/Date(1452297600000)/",
+        "label": "Beyond Villas Bali ",
+        "to": "/Date(1453075200000)/"
+    }, {
+        "customClass": "ganttGrey",
+        "dataObj": "/bookings/1070/edit",
+        "desc": "Ministry of Villas  <br/><br/>Status: Completed <br/>Date 24 Mar 2016 <br/>Stays 6 nights",
+        "from": "/Date(1458777600000)/",
+        "label": "Ministry of Villas ",
+        "to": "/Date(1459296000000)/"
+    }, {
+        "customClass": "ganttGrey",
+        "dataObj": "/bookings/937/edit",
+        "desc": "Agoda.com  <br/><br/>Status: Completed <br/>Date 10 Jan 2016 <br/>Stays 1 night",
+        "from": "/Date(1452384000000)/",
+        "label": "Agoda.com ",
+        "to": "/Date(1452470400000)/"
+    }, {
+        "customClass": "ganttGrey",
+        "dataObj": "/bookings/1037/edit",
+        "desc": "Agoda.com  <br/><br/>Status: Completed <br/>Date 25 Feb 2016 <br/>Stays 2 nights",
+        "from": "/Date(1456358400000)/",
+        "label": "Agoda.com ",
+        "to": "/Date(1456531200000)/"
+    }, {
+        "customClass": "ganttGrey",
+        "dataObj": "/bookings/1017/edit",
+        "desc": "Booking.com  <br/><br/>Status: Completed <br/>Date 12 Feb 2016 <br/>Stays 2 nights",
+        "from": "/Date(1455235200000)/",
+        "label": "Booking.com ",
+        "to": "/Date(1455408000000)/"
+    }, {
+        "customClass": "ganttGrey",
+        "dataObj": "/bookings/1024/edit",
+        "desc": "Expedia.com  <br/><br/>Status: Completed <br/>Date 17 Feb 2016 <br/>Stays 5 nights",
+        "from": "/Date(1455667200000)/",
+        "label": "Expedia.com ",
+        "to": "/Date(1456099200000)/"
+    }, {
+        "customClass": "ganttGrey",
+        "dataObj": "/bookings/1044/edit",
+        "desc": "Villa Website Direct Booking  <br/><br/>Status: Completed <br/>Date 02 Mar 2016 <br/>Stays 2 nights",
+        "from": "/Date(1456876800000)/",
+        "label": "Villa Website Direct Booking ",
+        "to": "/Date(1457049600000)/"
+    }, {
+        "customClass": "ganttGrey",
+        "dataObj": "/bookings/1059/edit",
+        "desc": "Villa Website Direct Booking  <br/><br/>Status: Completed <br/>Date 16 Mar 2016 <br/>Stays 3 nights",
+        "from": "/Date(1458086400000)/",
+        "label": "Villa Website Direct Booking ",
+        "to": "/Date(1458345600000)/"
+    }, {
+        "customClass": "ganttGrey",
+        "dataObj": "/bookings/1045/edit",
+        "desc": "Villa Website Direct Booking  <br/><br/>Status: Completed <br/>Date 02 Mar 2016 <br/>Stays 2 nights",
+        "from": "/Date(1456876800000)/",
+        "label": "Villa Website Direct Booking ",
+        "to": "/Date(1457049600000)/"
+    }, {
+        "customClass": "ganttGrey",
+        "dataObj": "/bookings/1064/edit",
+        "desc": "Online Booking Group  <br/><br/>Status: Completed <br/>Date 19 Mar 2016 <br/>Stays 11 nights",
+        "from": "/Date(1458345600000)/",
+        "label": "Online Booking Group ",
+        "to": "/Date(1459296000000)/"
+    }, {
+        "customClass": "ganttGrey",
+        "dataObj": "/bookings/1073/edit",
+        "desc": "Booking.com  <br/><br/>Status: Completed <br/>Date 24 Mar 2016 <br/>Stays 10 nights",
+        "from": "/Date(1458777600000)/",
+        "label": "Booking.com ",
+        "to": "/Date(1459641600000)/"
+    }, {
+        "customClass": "ganttGrey",
+        "dataObj": "/bookings/1014/edit",
+        "desc": "BaliOn  <br/><br/>Status: Completed <br/>Date 11 Feb 2016 <br/>Stays 3 nights",
+        "from": "/Date(1455148800000)/",
+        "label": "BaliOn ",
+        "to": "/Date(1455408000000)/"
+    }, {
+        "customClass": "ganttGrey",
+        "dataObj": "/bookings/1075/edit",
+        "desc": "Agoda.com  <br/><br/>Status: Completed <br/>Date 25 Mar 2016 <br/>Stays 7 nights",
+        "from": "/Date(1458864000000)/",
+        "label": "Agoda.com ",
+        "to": "/Date(1459468800000)/"
+    }, {
+        "customClass": "ganttGrey",
+        "dataObj": "/bookings/927/edit",
+        "desc": "ASC Group  <br/><br/>Status: Completed <br/>Date 02 Jan 2016 <br/>Stays 10 nights",
+        "from": "/Date(1451692800000)/",
+        "label": "ASC Group ",
+        "to": "/Date(1452556800000)/"
+    }, {
+        "customClass": "ganttGrey",
+        "dataObj": "/bookings/950/edit",
+        "desc": "Bali Berdua Wedding  <br/><br/>Status: Completed <br/>Date 15 Jan 2016 <br/>Stays 2 nights",
+        "from": "/Date(1452816000000)/",
+        "label": "Bali Berdua Wedding ",
+        "to": "/Date(1452988800000)/"
+    }, {
+        "customClass": "ganttGrey",
+        "dataObj": "/bookings/930/edit",
+        "desc": "BaliOn  <br/><br/>Status: Completed <br/>Date 04 Jan 2016 <br/>Stays 2 nights",
+        "from": "/Date(1451865600000)/",
+        "label": "BaliOn ",
+        "to": "/Date(1452038400000)/"
+    }, {
+        "customClass": "ganttGrey",
+        "dataObj": "/bookings/936/edit",
+        "desc": "Agoda.com  <br/><br/>Status: Completed <br/>Date 09 Jan 2016 <br/>Stays 2 nights",
+        "from": "/Date(1452297600000)/",
+        "label": "Agoda.com ",
+        "to": "/Date(1452470400000)/"
+    }, {
+        "customClass": "ganttGrey",
+        "dataObj": "/bookings/949/edit",
+        "desc": "Bali Berdua Wedding  <br/><br/>Status: Completed <br/>Date 15 Jan 2016 <br/>Stays 2 nights",
+        "from": "/Date(1452816000000)/",
+        "label": "Bali Berdua Wedding ",
+        "to": "/Date(1452988800000)/"
+    }, {
+        "customClass": "ganttGrey",
+        "dataObj": "/bookings/948/edit",
+        "desc": "Bali Berdua Wedding  <br/><br/>Status: Completed <br/>Date 15 Jan 2016 <br/>Stays 2 nights",
+        "from": "/Date(1452816000000)/",
+        "label": "Bali Berdua Wedding ",
+        "to": "/Date(1452988800000)/"
+    }, {
+        "customClass": "ganttGrey",
+        "dataObj": "/bookings/954/edit",
+        "desc": "Booking.com  <br/><br/>Status: Completed <br/>Date 17 Jan 2016 <br/>Stays 4 nights",
+        "from": "/Date(1452988800000)/",
+        "label": "Booking.com ",
+        "to": "/Date(1453334400000)/"
+    }, {
+        "customClass": "ganttGrey",
+        "dataObj": "/bookings/967/edit",
+        "desc": "Booking.com  <br/><br/>Status: Completed <br/>Date 22 Jan 2016 <br/>Stays 2 nights",
+        "from": "/Date(1453420800000)/",
+        "label": "Booking.com ",
+        "to": "/Date(1453593600000)/"
+    }, {
+        "customClass": "ganttGrey",
+        "dataObj": "/bookings/996/edit",
+        "desc": "BaliOn  <br/><br/>Status: Completed <br/>Date 05 Feb 2016 <br/>Stays 5 nights",
+        "from": "/Date(1454630400000)/",
+        "label": "BaliOn ",
+        "to": "/Date(1455062400000)/"
+    }, {
+        "customClass": "ganttGrey",
+        "dataObj": "/bookings/971/edit",
+        "desc": "BaliOn  <br/><br/>Status: Completed <br/>Date 25 Jan 2016 <br/>Stays 2 nights",
+        "from": "/Date(1453680000000)/",
+        "label": "BaliOn ",
+        "to": "/Date(1453852800000)/"
+    }, {
+        "customClass": "ganttGrey",
+        "dataObj": "/bookings/1026/edit",
+        "desc": "Villa Website Direct Booking  <br/><br/>Status: Completed <br/>Date 18 Feb 2016 <br/>Stays 3 nights",
+        "from": "/Date(1455753600000)/",
+        "label": "Villa Website Direct Booking ",
+        "to": "/Date(1456012800000)/"
+    }, {
+        "customClass": "ganttOrange",
+        "dataObj": "/bookings/1039/edit",
+        "desc": "Villa Website Direct Booking  <br/><br/>Status: Awaiting balance <br/>Date 26 Feb 2016 <br/>Stays 3 nights",
+        "from": "/Date(1456444800000)/",
+        "label": "Villa Website Direct Booking ",
+        "to": "/Date(1456704000000)/"
+    }, {
+        "customClass": "ganttOrange",
+        "dataObj": "/bookings/961/edit",
+        "desc": "Villa Website Direct Booking  <br/><br/>Status: Awaiting balance <br/>Date 18 Jan 2016 <br/>Stays 3 nights",
+        "from": "/Date(1453075200000)/",
+        "label": "Villa Website Direct Booking ",
+        "to": "/Date(1453334400000)/"
+    }, {
+        "customClass": "ganttGrey",
+        "dataObj": "/bookings/1018/edit",
+        "desc": "Villa Website Direct Booking  <br/><br/>Status: Completed <br/>Date 12 Feb 2016 <br/>Stays 6 nights",
+        "from": "/Date(1455235200000)/",
+        "label": "Villa Website Direct Booking ",
+        "to": "/Date(1455753600000)/"
+    }, {
+        "customClass": "ganttGrey",
+        "dataObj": "/bookings/1036/edit",
+        "desc": "Villa Website Direct Booking  <br/><br/>Status: Completed <br/>Date 24 Feb 2016 <br/>Stays 2 nights",
+        "from": "/Date(1456272000000)/",
+        "label": "Villa Website Direct Booking ",
+        "to": "/Date(1456444800000)/"
+    }, {
+        "customClass": "ganttGrey",
+        "dataObj": "/bookings/1043/edit",
+        "desc": "Villa Website Direct Booking  <br/><br/>Status: Completed <br/>Date 02 Mar 2016 <br/>Stays 2 nights",
+        "from": "/Date(1456876800000)/",
+        "label": "Villa Website Direct Booking ",
+        "to": "/Date(1457049600000)/"
+    }, {
+        "customClass": "ganttGrey",
+        "dataObj": "/bookings/1046/edit",
+        "desc": "Villa Website Direct Booking  <br/><br/>Status: Completed <br/>Date 02 Mar 2016 <br/>Stays 2 nights",
+        "from": "/Date(1456876800000)/",
+        "label": "Villa Website Direct Booking ",
+        "to": "/Date(1457049600000)/"
+    }, {
+        "customClass": "ganttGrey",
+        "dataObj": "/bookings/970/edit",
+        "desc": "Ministry of Villas  <br/><br/>Status: Completed <br/>Date 24 Jan 2016 <br/>Stays 3 nights",
+        "from": "/Date(1453593600000)/",
+        "label": "Ministry of Villas ",
+        "to": "/Date(1453852800000)/"
+    }, {
+        "customClass": "ganttGrey",
+        "dataObj": "/bookings/1047/edit",
+        "desc": "Ministry of Villas  <br/><br/>Status: Completed <br/>Date 03 Mar 2016 <br/>Stays 5 nights",
+        "from": "/Date(1456963200000)/",
+        "label": "Ministry of Villas ",
+        "to": "/Date(1457395200000)/"
+    }, {
+        "customClass": "ganttGrey",
+        "dataObj": "/bookings/1078/edit",
+        "desc": "BaliOn  <br/><br/>Status: Completed <br/>Date 26 Mar 2016 <br/>Stays 7 nights",
+        "from": "/Date(1458950400000)/",
+        "label": "BaliOn ",
+        "to": "/Date(1459555200000)/"
+    }, {
+        "customClass": "ganttGrey",
+        "dataObj": "/bookings/1071/edit",
+        "desc": "Ministry of Villas  <br/><br/>Status: Completed <br/>Date 24 Mar 2016 <br/>Stays 6 nights",
+        "from": "/Date(1458777600000)/",
+        "label": "Ministry of Villas ",
+        "to": "/Date(1459296000000)/"
+    }, {
+        "customClass": "ganttGrey",
+        "dataObj": "/bookings/940/edit",
+        "desc": "BaliOn  <br/><br/>Status: Completed <br/>Date 11 Jan 2016 <br/>Stays 4 nights",
+        "from": "/Date(1452470400000)/",
+        "label": "BaliOn ",
+        "to": "/Date(1452816000000)/"
+    }, {
+        "customClass": "ganttGrey",
+        "dataObj": "/bookings/953/edit",
+        "desc": "Online Booking Group  <br/><br/>Status: Completed <br/>Date 16 Jan 2016 <br/>Stays 6 nights",
+        "from": "/Date(1452902400000)/",
+        "label": "Online Booking Group ",
+        "to": "/Date(1453420800000)/"
+    }, {
+        "customClass": "ganttGrey",
+        "dataObj": "/bookings/958/edit",
+        "desc": "Booking.com  <br/><br/>Status: Completed <br/>Date 17 Jan 2016 <br/>Stays 1 night",
+        "from": "/Date(1452988800000)/",
+        "label": "Booking.com ",
+        "to": "/Date(1453075200000)/"
+    }, {
+        "customClass": "ganttGrey",
+        "dataObj": "/bookings/969/edit",
+        "desc": "Booking.com  <br/><br/>Status: Completed <br/>Date 24 Jan 2016 <br/>Stays 1 night",
+        "from": "/Date(1453593600000)/",
+        "label": "Booking.com ",
+        "to": "/Date(1453680000000)/"
+    }, {
+        "customClass": "ganttGrey",
+        "dataObj": "/bookings/984/edit",
+        "desc": "Booking.com  <br/><br/>Status: Completed <br/>Date 03 Feb 2016 <br/>Stays 10 nights",
+        "from": "/Date(1454457600000)/",
+        "label": "Booking.com ",
+        "to": "/Date(1455321600000)/"
+    }, {
+        "customClass": "ganttGrey",
+        "dataObj": "/bookings/1003/edit",
+        "desc": "Booking.com  <br/><br/>Status: Completed <br/>Date 08 Feb 2016 <br/>Stays 4 nights",
+        "from": "/Date(1454889600000)/",
+        "label": "Booking.com ",
+        "to": "/Date(1455235200000)/"
+    }, {
+        "customClass": "ganttGrey",
+        "dataObj": "/bookings/1004/edit",
+        "desc": "Booking.com  <br/><br/>Status: Completed <br/>Date 08 Feb 2016 <br/>Stays 4 nights",
+        "from": "/Date(1454889600000)/",
+        "label": "Booking.com ",
+        "to": "/Date(1455235200000)/"
+    }, {
+        "customClass": "ganttGrey",
+        "dataObj": "/bookings/1015/edit",
+        "desc": "Booking.com  <br/><br/>Status: Completed <br/>Date 11 Feb 2016 <br/>Stays 3 nights",
+        "from": "/Date(1455148800000)/",
+        "label": "Booking.com ",
+        "to": "/Date(1455408000000)/"
+    }, {
+        "customClass": "ganttGrey",
+        "dataObj": "/bookings/1027/edit",
+        "desc": "Booking.com  <br/><br/>Status: Completed <br/>Date 18 Feb 2016 <br/>Stays 3 nights",
+        "from": "/Date(1455753600000)/",
+        "label": "Booking.com ",
+        "to": "/Date(1456012800000)/"
+    }, {
+        "customClass": "ganttGrey",
+        "dataObj": "/bookings/1028/edit",
+        "desc": "Booking.com  <br/><br/>Status: Completed <br/>Date 18 Feb 2016 <br/>Stays 3 nights",
+        "from": "/Date(1455753600000)/",
+        "label": "Booking.com ",
+        "to": "/Date(1456012800000)/"
+    }, {
+        "customClass": "ganttGrey",
+        "dataObj": "/bookings/1065/edit",
+        "desc": "Online Booking Group  <br/><br/>Status: Completed <br/>Date 20 Mar 2016 <br/>Stays 4 nights",
+        "from": "/Date(1458432000000)/",
+        "label": "Online Booking Group ",
+        "to": "/Date(1458777600000)/"
+    }, {
+        "customClass": "ganttGrey",
+        "dataObj": "/bookings/925/edit",
+        "desc": "Expedia.com  <br/><br/>Status: Completed <br/>Date 01 Jan 2016 <br/>Stays 1 night",
+        "from": "/Date(1451606400000)/",
+        "label": "Expedia.com ",
+        "to": "/Date(1451692800000)/"
+    }, {
+        "customClass": "ganttGrey",
+        "dataObj": "/bookings/1020/edit",
+        "desc": "Expedia.com  <br/><br/>Status: Completed <br/>Date 13 Feb 2016 <br/>Stays 1 night",
+        "from": "/Date(1455321600000)/",
+        "label": "Expedia.com ",
+        "to": "/Date(1455408000000)/"
+    }, {
+        "customClass": "ganttGrey",
+        "dataObj": "/bookings/963/edit",
+        "desc": "Expedia.com  <br/><br/>Status: Completed <br/>Date 20 Jan 2016 <br/>Stays 4 nights",
+        "from": "/Date(1453248000000)/",
+        "label": "Expedia.com ",
+        "to": "/Date(1453593600000)/"
+    }, {
+        "customClass": "ganttOrange",
+        "dataObj": "/bookings/1057/edit",
+        "desc": "Expedia.com  <br/><br/>Status: Awaiting deposit <br/>Date 08 Mar 2016 <br/>Stays 3 nights",
+        "from": "/Date(1457395200000)/",
+        "label": "Expedia.com ",
+        "to": "/Date(1457654400000)/"
+    }, {
+        "customClass": "ganttGrey",
+        "dataObj": "/bookings/1016/edit",
+        "desc": "Airbnb  <br/><br/>Status: Completed <br/>Date 11 Feb 2016 <br/>Stays 3 nights",
+        "from": "/Date(1455148800000)/",
+        "label": "Airbnb ",
+        "to": "/Date(1455408000000)/"
+    }, {
+        "customClass": "ganttGrey",
+        "dataObj": "/bookings/1459/edit",
+        "desc": "BaliOn  <br/><br/>Status: Completed <br/>Date 15 Mar 2016 <br/>Stays 3 nights",
+        "from": "/Date(1458000000000)/",
+        "label": "BaliOn ",
+        "to": "/Date(1458259200000)/"
+    }, {
+        "customClass": "ganttGrey",
+        "dataObj": "/bookings/992/edit",
+        "desc": "Bali Villas Group  <br/><br/>Status: Completed <br/>Date 04 Feb 2016 <br/>Stays 9 nights",
+        "from": "/Date(1454544000000)/",
+        "label": "Bali Villas Group ",
+        "to": "/Date(1455321600000)/"
+    }, {
+        "customClass": "ganttGrey",
+        "dataObj": "/bookings/1060/edit",
+        "desc": "Private Villas and Houses  <br/><br/>Status: Completed <br/>Date 18 Mar 2016 <br/>Stays 6 nights",
+        "from": "/Date(1458259200000)/",
+        "label": "Private Villas and Houses ",
+        "to": "/Date(1458777600000)/"
+    }, {
+        "customClass": "ganttOrange",
+        "dataObj": "/bookings/1069/edit",
+        "desc": "Villa Website Direct Booking  <br/><br/>Status: Awaiting balance <br/>Date 23 Mar 2016 <br/>Stays 2 nights",
+        "from": "/Date(1458691200000)/",
+        "label": "Villa Website Direct Booking ",
+        "to": "/Date(1458864000000)/"
+    }, {
+        "customClass": "ganttGrey",
+        "dataObj": "/bookings/975/edit",
+        "desc": "Agoda.com  <br/><br/>Status: Completed <br/>Date 28 Jan 2016 <br/>Stays 8 nights",
+        "from": "/Date(1453939200000)/",
+        "label": "Agoda.com ",
+        "to": "/Date(1454630400000)/"
+    }, {
+        "customClass": "ganttGrey",
+        "dataObj": "/bookings/1488/edit",
+        "desc": "Ministry of Villas   <br/><br/>Status: Completed <br/>Date 24 Mar 2016 <br/>Stays 6 nights",
+        "from": "/Date(1458777600000)/",
+        "label": "Ministry of Villas  ",
+        "to": "/Date(1459296000000)/"
+    }, {
+        "customClass": "ganttGrey",
+        "dataObj": "/bookings/941/edit",
+        "desc": "Agoda.com  <br/><br/>Status: Completed <br/>Date 11 Jan 2016 <br/>Stays 1 night",
+        "from": "/Date(1452470400000)/",
+        "label": "Agoda.com ",
+        "to": "/Date(1452556800000)/"
+    }, {
+        "customClass": "ganttGrey",
+        "dataObj": "/bookings/1079/edit",
+        "desc": "BaliOn  <br/><br/>Status: Completed <br/>Date 26 Mar 2016 <br/>Stays 7 nights",
+        "from": "/Date(1458950400000)/",
+        "label": "BaliOn ",
+        "to": "/Date(1459555200000)/"
+    }, {
+        "customClass": "ganttGrey",
+        "dataObj": "/bookings/957/edit",
+        "desc": "Expedia.com  <br/><br/>Status: Completed <br/>Date 17 Jan 2016 <br/>Stays 2 nights",
+        "from": "/Date(1452988800000)/",
+        "label": "Expedia.com ",
+        "to": "/Date(1453161600000)/"
+    }, {
+        "customClass": "ganttGrey",
+        "dataObj": "/bookings/1493/edit",
+        "desc": "Booking.com  <br/><br/>Status: Completed <br/>Date 10 Mar 2016 <br/>Stays 9 nights",
+        "from": "/Date(1457568000000)/",
+        "label": "Booking.com ",
+        "to": "/Date(1458345600000)/"
+    }, {
+        "customClass": "ganttGrey",
+        "dataObj": "/bookings/1494/edit",
+        "desc": "Booking.com   <br/><br/>Status: Completed <br/>Date 19 Feb 2016 <br/>Stays 2 nights",
+        "from": "/Date(1455840000000)/",
+        "label": "Booking.com  ",
+        "to": "/Date(1456012800000)/"
+    }, {
+        "customClass": "ganttGrey",
+        "dataObj": "/bookings/990/edit",
+        "desc": "Booking.com  <br/><br/>Status: Completed <br/>Date 04 Feb 2016 <br/>Stays 9 nights",
+        "from": "/Date(1454544000000)/",
+        "label": "Booking.com ",
+        "to": "/Date(1455321600000)/"
+    }, {
+        "customClass": "ganttGrey",
+        "dataObj": "/bookings/1038/edit",
+        "desc": "Agoda.com  <br/><br/>Status: Completed <br/>Date 25 Feb 2016 <br/>Stays 3 nights",
+        "from": "/Date(1456358400000)/",
+        "label": "Agoda.com ",
+        "to": "/Date(1456617600000)/"
+    }, {
+        "customClass": "ganttGrey",
+        "dataObj": "/bookings/1007/edit",
+        "desc": "Bulan Madu  <br/><br/>Status: Completed <br/>Date 08 Feb 2016 <br/>Stays 4 nights",
+        "from": "/Date(1454889600000)/",
+        "label": "Bulan Madu ",
+        "to": "/Date(1455235200000)/"
+    }, {
+        "customClass": "ganttGrey",
+        "dataObj": "/bookings/1061/edit",
+        "desc": "Private Villas and Houses  <br/><br/>Status: Completed <br/>Date 18 Mar 2016 <br/>Stays 6 nights",
+        "from": "/Date(1458259200000)/",
+        "label": "Private Villas and Houses ",
+        "to": "/Date(1458777600000)/"
+    }, {
+        "customClass": "ganttGrey",
+        "dataObj": "/bookings/1005/edit",
+        "desc": "Bulan Madu  <br/><br/>Status: Completed <br/>Date 08 Feb 2016 <br/>Stays 4 nights",
+        "from": "/Date(1454889600000)/",
+        "label": "Bulan Madu ",
+        "to": "/Date(1455235200000)/"
+    }, {
+        "customClass": "ganttGrey",
+        "dataObj": "/bookings/1006/edit",
+        "desc": "Bulan Madu  <br/><br/>Status: Completed <br/>Date 08 Feb 2016 <br/>Stays 4 nights",
+        "from": "/Date(1454889600000)/",
+        "label": "Bulan Madu ",
+        "to": "/Date(1455235200000)/"
+    }, {
+        "customClass": "ganttGrey",
+        "dataObj": "/bookings/952/edit",
+        "desc": "BaliOn  <br/><br/>Status: Completed <br/>Date 15 Jan 2016 <br/>Stays 3 nights",
+        "from": "/Date(1452816000000)/",
+        "label": "BaliOn ",
+        "to": "/Date(1453075200000)/"
+    }]
+}]
