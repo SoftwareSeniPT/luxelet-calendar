@@ -4,7 +4,7 @@ var Calendar = (function () {
     function Calendar() {
     }
     Calendar.load = function (callback) {
-        jQuery.get("calendar.json", function (calendar) {
+        jQuery.get("./calendar.json", function (calendar) {
             callback(JSON.parse(calendar));
         });
     };

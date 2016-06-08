@@ -3,7 +3,7 @@ const {jQuery, moment}: any = window;
 let calendarInstance = [];
 class Calendar {
   static load(callback) {
-    jQuery.get("calendar.json", function(calendar) {
+    jQuery.get("./calendar.json", function(calendar) {
       callback(JSON.parse(calendar));
     });
   }
