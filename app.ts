@@ -275,8 +275,12 @@ class Calendar {
     const totalDay = jQuery(".lx-header-property-date .days .day").length;
     jQuery(".lx-property").each((i, o) => {
       const days = jQuery(o).find(".event").not(".on-hold, .last-day").length;
+      function roundToTwo(num) {
+          const n:any = num + "e+2";
+          return +(Math.round(n)  + "e-2");
+      }
 
-      jQuery(o).find(".lx-occ-inner").text(`${Math.round((days / totalDay) * 100)}%`);
+      jQuery(o).find(".lx-occ-inner").text(`${roundToTwo((days / totalDay) * 100)}%`);
       jQuery(o).attr("data-occ-total", days);
       jQuery(o).attr("data-total-day", totalDay);
     });
@@ -287,10 +291,38 @@ class Calendar {
     calculateOccupation();
     label();
   }
+
+
+  static jumpToMonthHandler(instance, callback) {
+    jQuery("#jump-to-last-month").click(() => {
+      Calendar.loopInstance(instance, (ins) => {
+        const month = moment().subtract(1,'months').format("M");
+        // const year = moment().subtract(1,'months').format("YYYY");
+        ins.setMonth(parseInt(month) - 1, { withCallbacks: true });
+        // ins.setYear(year, { withCallbacks: true });
+      }, callback);
+    });
+    jQuery("#jump-to-this-month").click(() => {
+      Calendar.loopInstance(instance, (ins) => {
+        const month = moment().format("M");
+        // const year = moment().subtract(1,'months').format("YYYY");
+        ins.setMonth(parseInt(month) - 1, { withCallbacks: true });
+        // ins.setYear(year, { withCallbacks: true });
+      }, callback);
+    });
+    jQuery("#jump-to-next-month").click(() => {
+      Calendar.loopInstance(instance, (ins) => {
+        const month = moment().add(1,'months').format("M");
+        // const year = moment().subtract(1,'months').format("YYYY");
+        ins.setMonth(parseInt(month) - 1, { withCallbacks: true });
+        // ins.setYear(year, { withCallbacks: true });
+      }, callback);
+    });
+  }
 }
 
 jQuery(document).ready(() => {
-  const {load, formatJson, initClndr, initClndrHeader, changeCalendar, DOMProcess, changeOnNav, selectDefaultDate} = Calendar;
+  const {load, formatJson, initClndr, initClndrHeader, changeCalendar, DOMProcess, changeOnNav, selectDefaultDate, jumpToMonthHandler} = Calendar;
   selectDefaultDate()
   load("http://softwaresenipt.github.io/luxelet-calendar/calendar.json", (calendar) => formatJson(calendar, (formatted) => {
       initClndrHeader();
@@ -303,6 +335,10 @@ jQuery(document).ready(() => {
         });
         // Init month navigation
         changeOnNav(calendarInstance, () => {
+          DOMProcess(); // Reinit label
+        });
+        // Init header navigation
+        jumpToMonthHandler(calendarInstance, () => {
           DOMProcess(); // Reinit label
         });
         console.log(formatted, "done!");
