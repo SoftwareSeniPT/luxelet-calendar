@@ -3,8 +3,8 @@ var calendarInstance = [];
 var Calendar = (function () {
     function Calendar() {
     }
-    Calendar.load = function (callback) {
-        jQuery.get("./calendar.json", function (calendar) {
+    Calendar.load = function (source, callback) {
+        jQuery.get(source, function (calendar) {
             callback(calendar);
         });
     };
@@ -19,6 +19,7 @@ var Calendar = (function () {
     Calendar.formatJson = function (calendar, callback) {
         var formatted = calendar.map(function (cal, key) {
             var tempEvents = [];
+            var occupancyTotal = 0;
             var name = cal.name, _a = cal.values, values = _a === void 0 ? [] : _a;
             var formattedName = jQuery(name).find("strong").text();
             var formattedEvents = values.map(function (event, key) {
@@ -48,15 +49,18 @@ var Calendar = (function () {
                     var oneDay = 24 * 60 * 60 * 1000;
                     return Math.round(Math.abs((from - to) / (oneDay)));
                 }
+                if (status !== "on-hold") {
+                    occupancyTotal = occupancyTotal + getStayDayLength(formattedFrom, formattedTo);
+                }
                 var info = [{
                         name: "Agent",
                         value: label
                     }, {
                         name: "Check In",
-                        value: moment(new Date(formattedFrom)).format('DD MM YYYY')
+                        value: moment(new Date(formattedFrom)).format('DD MMMM YYYY')
                     }, {
                         name: "Check Out",
-                        value: moment(new Date(formattedTo)).format('DD MM YYYY')
+                        value: moment(new Date(formattedTo)).format('DD MMMM YYYY')
                     }, {
                         name: "Status",
                         value: statusLabel
@@ -89,15 +93,32 @@ var Calendar = (function () {
             });
             return {
                 name: formattedName,
-                events: formattedEvents.concat(tempEvents)
+                events: formattedEvents.concat(tempEvents),
+                occupancyTotal: occupancyTotal
             };
         });
         callback(formatted);
     };
+    Calendar.changeDatePicker = function (month, year) {
+        jQuery("#lx-month-picker").val(month);
+        jQuery("#lx-month-year").val(year);
+    };
     Calendar.initClndrHeader = function () {
         var CLNDR = jQuery("#calendar-header").clndr({
             showAdjacentMonths: false,
-            template: jQuery('#calendar-header-template').html()
+            template: jQuery('#calendar-header-template').html(),
+            clickEvents: {
+                onMonthChange: function (month) {
+                    var momentMonth = moment(month).format("M");
+                    var momentYear = moment(month).format("YYYY");
+                    Calendar.changeDatePicker(momentMonth, momentYear);
+                },
+                onYearChange: function (month) {
+                    var momentMonth = moment(month).format("M");
+                    var momentYear = moment(month).format("YYYY");
+                    Calendar.changeDatePicker(momentMonth, momentYear);
+                }
+            }
         });
         calendarInstance.push(CLNDR);
     };
@@ -105,7 +126,7 @@ var Calendar = (function () {
         jQuery.each(formattedData, function (i, o) {
             var name = o.name, events = o.events;
             var calendarElement = jQuery('#calendar')
-                .append("<div class=\"lx-property\">\n        <div class=\"lx-name\">\n          <div class=\"lx-name-inner\">\n            <span>" + name + "</span>\n          </div>\n        </div>\n        <div class=\"lx-calendar clndr-" + i + "\"></div>\n      </div>")
+                .append("<div class=\"lx-property\">\n        <div class=\"lx-name\">\n          <div class=\"lx-name-inner\">\n            <span>" + name + "</span>\n          </div>\n        </div>\n        <div class=\"lx-occ\">\n          <div class=\"lx-occ-inner\">3.3</div>\n        </div>\n        <div class=\"lx-calendar clndr-" + i + "\"></div>\n      </div>")
                 .find(".clndr-" + i);
             var CLNDR = calendarElement.clndr({
                 showAdjacentMonths: false,
@@ -138,23 +159,23 @@ var Calendar = (function () {
     Calendar.changeMonth = function (month, instance, callback) {
         if (instance === void 0) { instance = []; }
         Calendar.loopInstance(instance, function (ins) {
-            ins.setMonth(month, { withCallbacks: true });
+            ins.setMonth(month);
         }, callback);
     };
     Calendar.changeYear = function (year, instance, callback) {
         if (instance === void 0) { instance = []; }
         Calendar.loopInstance(instance, function (ins) {
-            ins.setYear(year, { withCallbacks: true });
+            ins.setYear(year);
         }, callback);
     };
     Calendar.forward = function (instance, callback) {
         Calendar.loopInstance(instance, function (ins) {
-            ins.forward();
+            ins.forward({ withCallbacks: true });
         }, callback);
     };
     Calendar.back = function (instance, callback) {
         Calendar.loopInstance(instance, function (ins) {
-            ins.back();
+            ins.back({ withCallbacks: true });
         }, callback);
     };
     Calendar.changeOnNav = function (instance, callback) {
@@ -204,24 +225,38 @@ var Calendar = (function () {
     Calendar.selectDefaultDate = function () {
         var month = moment().format("M");
         var year = moment().format("YYYY");
-        jQuery("#lx-month-picker").val(month);
-        jQuery("#lx-month-year").val(year);
+        Calendar.changeDatePicker(month, year);
+    };
+    Calendar.calculateOccupation = function () {
+        var totalDay = jQuery(".lx-header-property-date .days .day").length;
+        jQuery(".lx-property").each(function (i, o) {
+            var days = jQuery(o).find(".event").not(".on-hold, .last-day").length;
+            jQuery(o).find(".lx-occ-inner").text(Math.round((days / totalDay) * 100) + "%");
+            jQuery(o).attr("data-occ-total", days);
+            jQuery(o).attr("data-total-day", totalDay);
+        });
+    };
+    Calendar.DOMProcess = function () {
+        var calculateOccupation = Calendar.calculateOccupation, label = Calendar.label;
+        calculateOccupation();
+        label();
     };
     return Calendar;
 }());
 jQuery(document).ready(function () {
-    var load = Calendar.load, formatJson = Calendar.formatJson, initClndr = Calendar.initClndr, initClndrHeader = Calendar.initClndrHeader, changeCalendar = Calendar.changeCalendar, label = Calendar.label, changeOnNav = Calendar.changeOnNav, selectDefaultDate = Calendar.selectDefaultDate;
+    var load = Calendar.load, formatJson = Calendar.formatJson, initClndr = Calendar.initClndr, initClndrHeader = Calendar.initClndrHeader, changeCalendar = Calendar.changeCalendar, DOMProcess = Calendar.DOMProcess, changeOnNav = Calendar.changeOnNav, selectDefaultDate = Calendar.selectDefaultDate;
     selectDefaultDate();
-    load(function (calendar) { return formatJson(calendar, function (formatted) {
+    load("http://softwaresenipt.github.io/luxelet-calendar/calendar.json", function (calendar) { return formatJson(calendar, function (formatted) {
         initClndrHeader();
         initClndr(formatted, function (calendarInstance) {
-            label();
+            DOMProcess();
             changeCalendar(calendarInstance, function () {
-                label();
+                DOMProcess();
             });
             changeOnNav(calendarInstance, function () {
-                label();
+                DOMProcess();
             });
+            console.log(formatted, "done!");
         });
     }); });
 });

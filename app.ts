@@ -2,8 +2,8 @@ const {jQuery, moment}: any = window;
 
 let calendarInstance = [];
 class Calendar {
-  static load(callback) {
-    jQuery.get("./calendar.json", function(calendar) {
+  static load(source, callback) {
+    jQuery.get(source, function(calendar) {
       callback(calendar);
     });
   }
@@ -20,6 +20,7 @@ class Calendar {
   static formatJson(calendar, callback) {
     const formatted = calendar.map((cal, key) => {
       let tempEvents = [];
+      let occupancyTotal = 0;
       const {name, values = []} = cal;
       const formattedName = jQuery(name).find("strong").text();
       const formattedEvents = values.map((event, key) => {
@@ -55,16 +56,21 @@ class Calendar {
           return Math.round(Math.abs((from - to)/(oneDay)))
         }
 
+        // Add occupancyTotal
+        if (status !== "on-hold") {
+          occupancyTotal = occupancyTotal + getStayDayLength(formattedFrom, formattedTo)
+        }
+
         // Create information instance
         const info = [{
           name: "Agent",
           value: label
         }, {
           name: "Check In",
-          value: moment(new Date(formattedFrom)).format('DD MM YYYY')
+          value: moment(new Date(formattedFrom)).format('DD MMMM YYYY')
         }, {
           name: "Check Out",
-          value: moment(new Date(formattedTo)).format('DD MM YYYY')
+          value: moment(new Date(formattedTo)).format('DD MMMM YYYY')
         }, {
           name: "Status",
           value: statusLabel
@@ -102,16 +108,34 @@ class Calendar {
 
       return {
         name: formattedName,
-        events: formattedEvents.concat(tempEvents)
+        events: formattedEvents.concat(tempEvents),
+        occupancyTotal: occupancyTotal
       };
     });
     callback(formatted);
   }
 
+  static changeDatePicker(month, year) {
+    jQuery("#lx-month-picker").val(month);
+    jQuery("#lx-month-year").val(year);
+  }
+
   static initClndrHeader() {
     const CLNDR = jQuery("#calendar-header").clndr({
       showAdjacentMonths: false,
-      template: jQuery('#calendar-header-template').html()
+      template: jQuery('#calendar-header-template').html(),
+      clickEvents: {
+        onMonthChange: (month) => {
+          const momentMonth = moment(month).format("M");
+          const momentYear = moment(month).format("YYYY");
+          Calendar.changeDatePicker(momentMonth, momentYear);
+        },
+        onYearChange: (month) => {
+          const momentMonth = moment(month).format("M");
+          const momentYear = moment(month).format("YYYY");
+          Calendar.changeDatePicker(momentMonth, momentYear);
+        }
+      }
     });
     calendarInstance.push(CLNDR);
   }
@@ -125,6 +149,9 @@ class Calendar {
           <div class="lx-name-inner">
             <span>${name}</span>
           </div>
+        </div>
+        <div class="lx-occ">
+          <div class="lx-occ-inner">3.3</div>
         </div>
         <div class="lx-calendar clndr-${i}"></div>
       </div>`)
@@ -162,25 +189,25 @@ class Calendar {
 
   static changeMonth(month, instance = [], callback?) {
     Calendar.loopInstance(instance, (ins) => {
-      ins.setMonth(month, { withCallbacks: true });
+      ins.setMonth(month);
     }, callback);
   }
 
   static changeYear(year, instance = [], callback?) {
     Calendar.loopInstance(instance, (ins) => {
-      ins.setYear(year, { withCallbacks: true });
+      ins.setYear(year);
     }, callback);
   }
 
   static forward(instance, callback?) {
     Calendar.loopInstance(instance, (ins) => {
-      ins.forward();
+      ins.forward({ withCallbacks: true });
     }, callback);
   }
 
   static back(instance, callback?) {
     Calendar.loopInstance(instance, (ins) => {
-      ins.back();
+      ins.back({ withCallbacks: true });
     }, callback);
   }
 
@@ -241,28 +268,44 @@ class Calendar {
   static selectDefaultDate() {
     const month = moment().format("M");
     const year = moment().format("YYYY");
-    jQuery("#lx-month-picker").val(month);
-    jQuery("#lx-month-year").val(year);
+    Calendar.changeDatePicker(month, year);
+  }
+
+  static calculateOccupation() {
+    const totalDay = jQuery(".lx-header-property-date .days .day").length;
+    jQuery(".lx-property").each((i, o) => {
+      const days = jQuery(o).find(".event").not(".on-hold, .last-day").length;
+
+      jQuery(o).find(".lx-occ-inner").text(`${Math.round((days / totalDay) * 100)}%`);
+      jQuery(o).attr("data-occ-total", days);
+      jQuery(o).attr("data-total-day", totalDay);
+    });
+  }
+
+  static DOMProcess() {
+    const {calculateOccupation, label} = Calendar;
+    calculateOccupation();
+    label();
   }
 }
 
 jQuery(document).ready(() => {
-  const {load, formatJson, initClndr, initClndrHeader, changeCalendar, label, changeOnNav, selectDefaultDate} = Calendar;
+  const {load, formatJson, initClndr, initClndrHeader, changeCalendar, DOMProcess, changeOnNav, selectDefaultDate} = Calendar;
   selectDefaultDate()
-  load((calendar) => formatJson(calendar, (formatted) => {
+  load("http://softwaresenipt.github.io/luxelet-calendar/calendar.json", (calendar) => formatJson(calendar, (formatted) => {
       initClndrHeader();
       initClndr(formatted, (calendarInstance) => {
         // Init calendar label for the first time
-        label();
+        DOMProcess();
         // Init date picker
         changeCalendar(calendarInstance, () => {
-          label(); // Re init label
+          DOMProcess(); // Re init label
         });
         // Init month navigation
         changeOnNav(calendarInstance, () => {
-          label(); // Reinit label
+          DOMProcess(); // Reinit label
         });
-        // console.log(formatted, "done!");
+        console.log(formatted, "done!");
       });
     })
   );
