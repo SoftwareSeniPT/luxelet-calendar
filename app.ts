@@ -150,9 +150,6 @@ class Calendar {
             <span>${name}</span>
           </div>
         </div>
-        <div class="lx-occ">
-          <div class="lx-occ-inner">3.3</div>
-        </div>
         <div class="lx-calendar clndr-${i}"></div>
       </div>`)
       .find(`.clndr-${i}`)
@@ -223,7 +220,7 @@ class Calendar {
   static changeCalendar(instance = [], callback?) {
     jQuery("#lx-month-picker").change((e) => {
       const value = parseInt(jQuery(e.target).val());
-      Calendar.changeMonth(value, instance, callback);
+      Calendar.changeMonth(value - 1, instance, callback);
     });
     jQuery("#lx-month-year").change((e) => {
       const value = parseInt(jQuery(e.target).val());

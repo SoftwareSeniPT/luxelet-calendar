@@ -126,7 +126,7 @@ var Calendar = (function () {
         jQuery.each(formattedData, function (i, o) {
             var name = o.name, events = o.events;
             var calendarElement = jQuery('#calendar')
-                .append("<div class=\"lx-property\">\n        <div class=\"lx-name\">\n          <div class=\"lx-name-inner\">\n            <span>" + name + "</span>\n          </div>\n        </div>\n        <div class=\"lx-occ\">\n          <div class=\"lx-occ-inner\">3.3</div>\n        </div>\n        <div class=\"lx-calendar clndr-" + i + "\"></div>\n      </div>")
+                .append("<div class=\"lx-property\">\n        <div class=\"lx-name\">\n          <div class=\"lx-name-inner\">\n            <span>" + name + "</span>\n          </div>\n        </div>\n        <div class=\"lx-calendar clndr-" + i + "\"></div>\n      </div>")
                 .find(".clndr-" + i);
             var CLNDR = calendarElement.clndr({
                 showAdjacentMonths: false,
@@ -191,7 +191,7 @@ var Calendar = (function () {
         if (instance === void 0) { instance = []; }
         jQuery("#lx-month-picker").change(function (e) {
             var value = parseInt(jQuery(e.target).val());
-            Calendar.changeMonth(value, instance, callback);
+            Calendar.changeMonth(value - 1, instance, callback);
         });
         jQuery("#lx-month-year").change(function (e) {
             var value = parseInt(jQuery(e.target).val());

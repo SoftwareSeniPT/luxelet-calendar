@@ -43,7 +43,7 @@ body {
     background: #e7e7e7;
 }
 .lx-property .lx-calendar, .lx-header-property-date {
-    width: 78%;
+    width: 86%;
 }
 .lx-calendar .day .day-inner, .lx-header-property-date .day .day-inner {
     padding-bottom: 100%;
@@ -70,16 +70,13 @@ body {
     color: #fff;
     font-size: 13px;
 }
-
 .calendar-picker span {
-  margin-left: 10px;
-  cursor: pointer;
+    margin-left: 5px;
+    cursor: pointer;
 }
-
 .calendar-picker span:hover {
-  color: #d7d7d7;
+    color: #d7d7d7;
 }
-
 .calendar-picker select {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -92,7 +89,7 @@ body {
     background: #fff url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20version%3D%221.1%22%20width%3D%2232%22%20height%3D%2224%22%20viewBox%3D%220%200%2032%2024%22%3E%3Cpolygon%20points%3D%220%2C0%2032%2C0%2016%2C24%22%20style%3D%22fill%3A%20black%22%3E%3C/polygon%3E%3C/svg%3E") right 10px center no-repeat;
     background-size: 8px 8px;
     padding-right: 1.625rem;
-    font-size: 14px;
+    font-size: 13px;
     outline: 0;
 }
 
@@ -305,8 +302,8 @@ body {
 .lx-calendar .day.first-day:before, .lx-calendar .day.last-day:before {
     position: absolute;
     content: "";
-    width: 105%;
-    height: 105%;
+    width: 100%;
+    height: 100%;
     background-size: cover;
     background: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjIuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb2 46IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtb G5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cu dzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCA2NCA2NCI gc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNjQgNjQ7IiB4bWw6c3BhY2U9InByZX NlcnZlIj4KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4KCS5zdDB7ZmlsbDojRTdFN0U3O30KPC9zd HlsZT4KPHBvbHlnb24gY2xhc3M9InN0MCIgcG9pbnRzPSIwLDY0LjEgNjQsMCAwLDAgIi8+Cjwv c3ZnPgo=")
 }
@@ -336,7 +333,7 @@ body {
     visibility: visible;
     z-index: 100;
 }
-.lx-tooltip-inner, .lx-legend-info {
+.lx-tooltip-inner, .lx-legend-info, .calendar-picker-dropdown-content {
     position: absolute;
     background: #fff;
     width: 160px;
@@ -389,4 +386,73 @@ body {
 }
 .lx-tooltips .info-item .value {
     width: 57%;
+}
+
+/* calendar-picker-dropdown */
+
+.calendar-picker-dropdown {
+    width: 150px;
+    position: relative;
+    padding: 10px;
+    background: #fff;
+    color: #333;
+    background: #fff url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20version%3D%221.1%22%20width%3D%2232%22%20height%3D%2224%22%20viewBox%3D%220%200%2032%2024%22%3E%3Cpolygon%20points%3D%220%2C0%2032%2C0%2016%2C24%22%20style%3D%22fill%3A%20black%22%3E%3C/polygon%3E%3C/svg%3E") right 10px center no-repeat;
+    background-size: 8px 8px;
+}
+.calendar-picker-dropdown:after {
+    content: "";
+    height: 5px;
+    width: 100%;
+    bottom: -3px;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    z-index: 134;
+    display: none;
+}
+.calendar-picker-dropdown svg {
+  display: inline-block;
+    vertical-align: bottom;
+}
+.calendar-picker-dropdown-content {
+    top: 100%;
+    z-index: -130;
+    width: 150px;
+    margin-left: -75px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    padding-top: 5px;
+    opacity: 0;
+    visibility: hidden;
+}
+.calendar-picker-dropdown:hover .calendar-picker-dropdown-content {
+    opacity: 1;
+    visibility: visible;
+    z-index: 130;
+}
+.calendar-picker-dropdown:hover:after {
+  display: block;
+}
+.calendar-picker-dropdown-content .calendar-picker-button {
+    border: 1px solid #ddd;
+    margin-bottom: 5px;
+    padding: 6px 8px;
+    border-radius: 2px;
+    background: #f5f5f5;
+    font-size: 13px;
+    cursor: pointer;
+}
+.calendar-picker-dropdown-content select {
+    border: 1px solid #ddd;
+    margin-bottom: 5px;
+    padding: 6px 8px;
+    border-radius: 2px;
+    width: 100%;
+    background-color: #f5f5f5;
+    cursor: pointer;
+}
+.calendar-picker-select {
+    border-top: 1px dashed #ddd;
+    padding-top: 10px;
+    margin-top: 10px;
 }
