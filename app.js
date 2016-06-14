@@ -1,4 +1,4 @@
-var jQuery = window.jQuery, moment = window.moment;
+var jQuery = window.jQuery, moment = window.moment, _ = window._;
 var calendarInstance = [];
 var Calendar = (function () {
     function Calendar() {
@@ -265,12 +265,19 @@ var Calendar = (function () {
             }, callback);
         });
     };
+    Calendar.changeUnderscoreSyntax = function () {
+        _.templateSettings = {
+            interpolate: /\{\{\=(.+?)\}\}/g,
+            evaluate: /\{\{(.+?)\}\}/g
+        };
+    };
     return Calendar;
 }());
 jQuery(document).ready(function () {
-    var load = Calendar.load, formatJson = Calendar.formatJson, initClndr = Calendar.initClndr, initClndrHeader = Calendar.initClndrHeader, changeCalendar = Calendar.changeCalendar, DOMProcess = Calendar.DOMProcess, changeOnNav = Calendar.changeOnNav, selectDefaultDate = Calendar.selectDefaultDate, jumpToMonthHandler = Calendar.jumpToMonthHandler;
+    var load = Calendar.load, formatJson = Calendar.formatJson, initClndr = Calendar.initClndr, initClndrHeader = Calendar.initClndrHeader, changeCalendar = Calendar.changeCalendar, DOMProcess = Calendar.DOMProcess, changeOnNav = Calendar.changeOnNav, selectDefaultDate = Calendar.selectDefaultDate, jumpToMonthHandler = Calendar.jumpToMonthHandler, changeUnderscoreSyntax = Calendar.changeUnderscoreSyntax;
     selectDefaultDate();
     load("http://softwaresenipt.github.io/luxelet-calendar/calendar.json", function (calendar) { return formatJson(calendar, function (formatted) {
+        changeUnderscoreSyntax();
         initClndrHeader();
         initClndr(formatted, function (calendarInstance) {
             DOMProcess();
