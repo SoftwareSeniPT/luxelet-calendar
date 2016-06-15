@@ -284,9 +284,10 @@ class Calendar {
     }
 
     static DOMProcess() {
-        const {calculateOccupation, label} = Calendar;
+        const {calculateOccupation, label, changeHeaderPosition} = Calendar;
         calculateOccupation();
         label();
+        changeHeaderPosition();
     }
 
 
@@ -324,34 +325,36 @@ class Calendar {
         };
     }
 
-    static floatingHeader() {
-      function getOffset(elem) {
-          var box = elem.getBoundingClientRect();
-          var body = document.body;
-          var docEl = document.documentElement;
-          var clientTop = docEl.clientTop || body.clientTop || 0;
-          var clientLeft = docEl.clientLeft || body.clientLeft || 0;
-          var top = box.top - clientTop;
-          var left = box.left - clientLeft;
-          var red = 25;
-          return {
-            top: top,
-            left: left
-          };
-        }
+    static changeHeaderPosition() {
+      const header = document.getElementById("calendar-header");
+      var offsetTop = Calendar.getOffset(header).top;
+      if (offsetTop < 0) {
+        // Change style for next row
+        jQuery("#calendar-header .lx-header-property-date").attr("style", `transform: translateY(${Math.abs(offsetTop)}px)`);
+      } else {
+        // Reset style for next row
+        jQuery("#calendar-header .lx-header-property-date").attr("style", `transform: translateY(0)`);
+      }
+    }
 
+    static getOffset(elem) {
+        var box = elem.getBoundingClientRect();
+        var body = document.body;
+        var docEl = document.documentElement;
+        var clientTop = docEl.clientTop || body.clientTop || 0;
+        var clientLeft = docEl.clientLeft || body.clientLeft || 0;
+        var top = box.top - clientTop;
+        var left = box.left - clientLeft;
+        var red = 25;
+        return {
+          top: top,
+          left: left
+        };
+      }
+
+    static floatingHeader() {
         // Detect the scroll on window
-        jQuery(window).on("scroll", (e) => {
-          const header = document.getElementById("calendar-header");
-          var offsetTop = getOffset(header).top;
-          if (offsetTop < 0) {
-            // Change style for next row
-            jQuery("#calendar-header .lx-header-property-date").attr("style", `transform: translateY(${Math.abs(offsetTop)}px)`);
-          } else {
-            // Reset style for next row
-            jQuery("#calendar-header .lx-header-property-date").attr("style", `transform: translateY(0)`);
-          }
-        });
+        jQuery(window).on("scroll", (e) => Calendar.changeHeaderPosition());
     }
 }
 

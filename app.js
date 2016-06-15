@@ -241,9 +241,10 @@ var Calendar = (function () {
         });
     };
     Calendar.DOMProcess = function () {
-        var calculateOccupation = Calendar.calculateOccupation, label = Calendar.label;
+        var calculateOccupation = Calendar.calculateOccupation, label = Calendar.label, changeHeaderPosition = Calendar.changeHeaderPosition;
         calculateOccupation();
         label();
+        changeHeaderPosition();
     };
     Calendar.jumpToMonthHandler = function (instance, callback) {
         jQuery("#jump-to-last-month").click(function () {
@@ -271,31 +272,32 @@ var Calendar = (function () {
             evaluate: /\{\{(.+?)\}\}/g
         };
     };
-    Calendar.floatingHeader = function () {
-        function getOffset(elem) {
-            var box = elem.getBoundingClientRect();
-            var body = document.body;
-            var docEl = document.documentElement;
-            var clientTop = docEl.clientTop || body.clientTop || 0;
-            var clientLeft = docEl.clientLeft || body.clientLeft || 0;
-            var top = box.top - clientTop;
-            var left = box.left - clientLeft;
-            var red = 25;
-            return {
-                top: top,
-                left: left
-            };
+    Calendar.changeHeaderPosition = function () {
+        var header = document.getElementById("calendar-header");
+        var offsetTop = Calendar.getOffset(header).top;
+        if (offsetTop < 0) {
+            jQuery("#calendar-header .lx-header-property-date").attr("style", "transform: translateY(" + Math.abs(offsetTop) + "px)");
         }
-        jQuery(window).on("scroll", function (e) {
-            var header = document.getElementById("calendar-header");
-            var offsetTop = getOffset(header).top;
-            if (offsetTop < 0) {
-                jQuery("#calendar-header .lx-header-property-date").attr("style", "transform: translateY(" + Math.abs(offsetTop) + "px)");
-            }
-            else {
-                jQuery("#calendar-header .lx-header-property-date").attr("style", "transform: translateY(0)");
-            }
-        });
+        else {
+            jQuery("#calendar-header .lx-header-property-date").attr("style", "transform: translateY(0)");
+        }
+    };
+    Calendar.getOffset = function (elem) {
+        var box = elem.getBoundingClientRect();
+        var body = document.body;
+        var docEl = document.documentElement;
+        var clientTop = docEl.clientTop || body.clientTop || 0;
+        var clientLeft = docEl.clientLeft || body.clientLeft || 0;
+        var top = box.top - clientTop;
+        var left = box.left - clientLeft;
+        var red = 25;
+        return {
+            top: top,
+            left: left
+        };
+    };
+    Calendar.floatingHeader = function () {
+        jQuery(window).on("scroll", function (e) { return Calendar.changeHeaderPosition(); });
     };
     return Calendar;
 }());
