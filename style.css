@@ -160,8 +160,11 @@ body {
 /* Calendar header */
 
 #calendar-header {
-    overflow: hidden;
     background-color: #bdbdbf;
+}
+#calendar-header .lx-header-property-date {
+  position: relative;
+  z-index: 50;
 }
 .lx-header-property-occ, .lx-property .lx-occ {
     width: 8%;

@@ -271,14 +271,41 @@ var Calendar = (function () {
             evaluate: /\{\{(.+?)\}\}/g
         };
     };
+    Calendar.floatingHeader = function () {
+        function getOffset(elem) {
+            var box = elem.getBoundingClientRect();
+            var body = document.body;
+            var docEl = document.documentElement;
+            var clientTop = docEl.clientTop || body.clientTop || 0;
+            var clientLeft = docEl.clientLeft || body.clientLeft || 0;
+            var top = box.top - clientTop;
+            var left = box.left - clientLeft;
+            var red = 25;
+            return {
+                top: top,
+                left: left
+            };
+        }
+        jQuery(window).on("scroll", function (e) {
+            var header = document.getElementById("calendar-header");
+            var offsetTop = getOffset(header).top;
+            if (offsetTop < 0) {
+                jQuery("#calendar-header .lx-header-property-date").attr("style", "transform: translateY(" + Math.abs(offsetTop) + "px)");
+            }
+            else {
+                jQuery("#calendar-header .lx-header-property-date").attr("style", "transform: translateY(0)");
+            }
+        });
+    };
     return Calendar;
 }());
 jQuery(document).ready(function () {
-    var load = Calendar.load, formatJson = Calendar.formatJson, initClndr = Calendar.initClndr, initClndrHeader = Calendar.initClndrHeader, changeCalendar = Calendar.changeCalendar, DOMProcess = Calendar.DOMProcess, changeOnNav = Calendar.changeOnNav, selectDefaultDate = Calendar.selectDefaultDate, jumpToMonthHandler = Calendar.jumpToMonthHandler, changeUnderscoreSyntax = Calendar.changeUnderscoreSyntax;
+    var load = Calendar.load, formatJson = Calendar.formatJson, initClndr = Calendar.initClndr, initClndrHeader = Calendar.initClndrHeader, changeCalendar = Calendar.changeCalendar, DOMProcess = Calendar.DOMProcess, changeOnNav = Calendar.changeOnNav, selectDefaultDate = Calendar.selectDefaultDate, jumpToMonthHandler = Calendar.jumpToMonthHandler, changeUnderscoreSyntax = Calendar.changeUnderscoreSyntax, floatingHeader = Calendar.floatingHeader;
     selectDefaultDate();
     load("http://softwaresenipt.github.io/luxelet-calendar/calendar.json", function (calendar) { return formatJson(calendar, function (formatted) {
         changeUnderscoreSyntax();
         initClndrHeader();
+        floatingHeader();
         initClndr(formatted, function (calendarInstance) {
             DOMProcess();
             changeCalendar(calendarInstance, function () {
@@ -290,7 +317,6 @@ jQuery(document).ready(function () {
             jumpToMonthHandler(calendarInstance, function () {
                 DOMProcess();
             });
-            console.log(formatted, "done!");
         });
     }); });
 });

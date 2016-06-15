@@ -323,14 +323,45 @@ class Calendar {
             evaluate: /\{\{(.+?)\}\}/g
         };
     }
+
+    static floatingHeader() {
+      function getOffset(elem) {
+          var box = elem.getBoundingClientRect();
+          var body = document.body;
+          var docEl = document.documentElement;
+          var clientTop = docEl.clientTop || body.clientTop || 0;
+          var clientLeft = docEl.clientLeft || body.clientLeft || 0;
+          var top = box.top - clientTop;
+          var left = box.left - clientLeft;
+          var red = 25;
+          return {
+            top: top,
+            left: left
+          };
+        }
+
+        // Detect the scroll on window
+        jQuery(window).on("scroll", (e) => {
+          const header = document.getElementById("calendar-header");
+          var offsetTop = getOffset(header).top;
+          if (offsetTop < 0) {
+            // Change style for next row
+            jQuery("#calendar-header .lx-header-property-date").attr("style", `transform: translateY(${Math.abs(offsetTop)}px)`);
+          } else {
+            // Reset style for next row
+            jQuery("#calendar-header .lx-header-property-date").attr("style", `transform: translateY(0)`);
+          }
+        });
+    }
 }
 
 jQuery(document).ready(() => {
-    const {load, formatJson, initClndr, initClndrHeader, changeCalendar, DOMProcess, changeOnNav, selectDefaultDate, jumpToMonthHandler, changeUnderscoreSyntax} = Calendar;
+    const {load, formatJson, initClndr, initClndrHeader, changeCalendar, DOMProcess, changeOnNav, selectDefaultDate, jumpToMonthHandler, changeUnderscoreSyntax, floatingHeader} = Calendar;
     selectDefaultDate()
     load("http://softwaresenipt.github.io/luxelet-calendar/calendar.json", (calendar) => formatJson(calendar, (formatted) => {
-        changeUnderscoreSyntax();
-        initClndrHeader();
+        changeUnderscoreSyntax(); // Change underscore syntax
+        initClndrHeader(); // Init calendar header
+        floatingHeader(); // Monitor floating header
         initClndr(formatted, (calendarInstance) => {
             // Init calendar label for the first time
             DOMProcess();
@@ -346,7 +377,6 @@ jQuery(document).ready(() => {
             jumpToMonthHandler(calendarInstance, () => {
                 DOMProcess(); // Reinit label
             });
-            console.log(formatted, "done!");
         });
     })
     );
